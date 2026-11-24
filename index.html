@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Blankoleo – kleine Apps</title>
+  <meta name="description" content="Kleine Apps, die ich gebaut habe: WikiFeed und Klangfeed – direkt im Browser, auch als App auf dem Home-Bildschirm.">
+  <meta name="theme-color" content="#07080d" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#e4eaf3" media="(prefers-color-scheme: light)">
+  <meta name="color-scheme" content="dark light">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Blankoleo">
+  <link rel="canonical" href="https://blankoleo.github.io/">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-64.png" type="image/png" sizes="64x64">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+  <!-- Vorschau beim Teilen (WhatsApp, iMessage, Signal, X …) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Blankoleo">
+  <meta property="og:title" content="Blankoleo – kleine Apps">
+  <meta property="og:description" content="WikiFeed, Klangfeed und mehr: kleine Apps direkt im Browser.">
+  <meta property="og:url" content="https://blankoleo.github.io/">
+  <meta property="og:image" content="https://blankoleo.github.io/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Blankoleo – Kleine Apps, die ich gebaut habe">
+  <meta property="og:locale" content="de_DE">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blankoleo – kleine Apps">
+  <meta name="twitter:description" content="WikiFeed, Klangfeed und mehr: kleine Apps direkt im Browser.">
+  <meta name="twitter:image" content="https://blankoleo.github.io/assets/og.png">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <main class="wrap">
+    <header class="head">
+      <img class="logo" src="assets/icon.svg" width="56" height="56" alt="">
+      <h1>Blankoleo</h1>
+      <p class="sub">Kleine Apps, die ich gebaut habe.</p>
+    </header>
+
+    <ul class="projects">
+      <!--
+        NEUES PROJEKT ERGÄNZEN: einen <li>-Block kopieren und anpassen.
+        - href: Link zur App
+        - style: zwei Farben für den Farbnebel der Karte (--c1, --c2)
+        - Icon nach assets/ legen (quadratisch, SVG oder PNG ≥ 192 px)
+      -->
+
+      <!-- Projekt: WikiFeed -->
+      <li class="project" style="--c1:#3a55c8; --c2:#2f3f6b">
+        <a href="https://blankoleo.github.io/wikifeed/">
+          <img class="p-icon" src="assets/wikifeed.svg" width="64" height="64" alt="">
+          <span class="p-text">
+            <span class="p-name">WikiFeed</span>
+            <span class="p-desc">Wikipedia wie ein Feed: spannende Artikel statt Social Media – und er lernt, was dich interessiert.</span>
+          </span>
+          <span class="p-go" aria-hidden="true">Öffnen<svg viewBox="0 0 16 16" width="14" height="14"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </li>
+
+      <!-- Projekt: Klangfeed -->
+      <li class="project" style="--c1:#7c5cff; --c2:#ff3d6e">
+        <a href="https://blankoleo.github.io/klangfeed/">
+          <img class="p-icon" src="assets/klangfeed.svg" width="64" height="64" alt="">
+          <span class="p-text">
+            <span class="p-name">Klangfeed</span>
+            <span class="p-desc">Wische durch Musik und entdecke neue Songs mit 30‑Sekunden‑Vorschauen.</span>
+          </span>
+          <span class="p-go" aria-hidden="true">Öffnen<svg viewBox="0 0 16 16" width="14" height="14"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        </a>
+      </li>
+    </ul>
+
+    <p class="tip"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3v12M8 7l4-4 4 4M6 11H5v10h14V11h-1" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span><b>Tipp:</b> In Safari über Teilen → Zum Home‑Bildschirm wie eine App nutzen.</span></p>
+
+    <div class="actions">
+      <button type="button" id="share" class="btn" hidden>
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M12 3v12M8 7l4-4 4 4M6 11H5v10h14V11h-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Seite teilen
+      </button>
+    </div>
+
+    <footer class="foot">
+      <a href="https://github.com/Blankoleo">GitHub</a>
+    </footer>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
